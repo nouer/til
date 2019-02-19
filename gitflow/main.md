@@ -2,15 +2,15 @@
 - gitのツール
 - 自分でgitのブランチモデルを自由に操作するのではなく、フレームワークの中で操作するためのツール
 - 各ブランチの役割
--- master: プロダクトのリリースブランチ、リリース時にreleaseブランチからマージされる
--- release: リリースブランチ、リリース時にdevelopブランチからマージされる
--- develop: 開発のメインブランチ、機能追加時にfeatureブランチからマージされる
--- feature branches: 機能の追加を行うブランチ、developブランチから分岐して修正し、developブランチにマージする
--- hotfixes: 緊急のバグフィックスなど、現在のプロダクトへの変更を行うブランチ、masterブランチから分岐する、修正後、relaseブランチにマージされる
+    - master: プロダクトのリリースブランチ、リリース時にreleaseブランチからマージされる
+    - release: リリースブランチ、リリース時にdevelopブランチからマージされる
+    - develop: 開発のメインブランチ、機能追加時にfeatureブランチからマージされる
+    - feature branches: 機能の追加を行うブランチ、developブランチから分岐して修正し、developブランチにマージする
+    - hotfixes: 緊急のバグフィックスなど、現在のプロダクトへの変更を行うブランチ、masterブランチから分岐する、修正後、relaseブランチにマージされる
 
 # インストール
 - macの場合homebrewでインストールが簡単  
-`git install git`
+`git install git`  
 `git install git-flow`
 
 # 使い方
