@@ -84,11 +84,39 @@
         アクセスユーザーの地域情報から、地域限定のアクセス許可／拒否を行うことができる  
         ストリーミング配信ができる
   - コンピューティングサービス
-    - EC2
+    - EC2  
+     インスタンスメタデータが取得できる、http://169.254.169.254/latest/meta-data/
     - AMI
     - Lambda
-    - 
-
+    - API Gateway
+    - EMR(Amazon Elastic MapReduce)
+    - ECS(Amazon ElasticContainer Service)
+    - VM Import/Export
+  - ストレージサービス
+    - S3(Amazon S3)
+    - EBS(Amazon EBS)
+    - インスタンスストア（エフェメラルディスク）
+    - EFS(Amazon Elastic File System)
+    - SGW(AWS Storage Gateway)  
+      - キャッシュ型ボリュームゲートウェイ  
+        S3に保存される。アクセス頻度の高いデータはローカルにキャッシュされて高速でアクセスできる。インターフェイスはiSCSI。
+      - 保管型ボリュームゲートウェイ  
+        データをスナップショットとしてS3に格納する。インターフィエイスはiSCSI。
+      - テープゲートウェイ  
+        物理テープ装置の代替としてデータをS3(Glacier）にかくのうする。インターフェイスはiSCSI。
+      - ファイルゲートウェイ  
+        データをS3に直接オブジェクトとして格納する。インターフェイスはNFS。
+    - AWS Import/Export
+    - AWS Import/Export Snowball
+  - データベースサービス
+    - RDS  
+      サポートされるデータベースエンジン
+        - Amazon Aurora(Aurora)
+        - PstgreSQL
+        - MySQL
+        - MariaDB
+        - Oracle Database
+        - SQL Server 
 ## AWSにおける高可用アーキテクチャ
 
 ## AWSにおけるパフォーマンス
