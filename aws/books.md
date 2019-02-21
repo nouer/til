@@ -22,23 +22,23 @@
 
 [Amazon Web Servicesを使ったサーバーレスアプリケーション開発ガイド][11]
 
-[Amazon Web Servicesネットワーク入門](B01M2BMB0V)
+[Amazon Web Servicesネットワーク入門][12]
 
-[スペシャリストが解説する　Amazon Web Services 知っておきたい基礎知識](B01BWM4FNM)
+[スペシャリストが解説する　Amazon Web Services 知っておきたい基礎知識][13]
 
-[Amazon Web Services徹底活用ガイド](B00T5ZGX0W)
+[Amazon Web Services徹底活用ガイド][14]
 
-[Amazon Web Services クラウドデザインパターン 実装ガイド](B00VHW3PG6)
+[Amazon Web Services クラウドデザインパターン 実装ガイド][15]
 
-[AWSエキスパート養成読本](B01CXM3DZQ)
+[AWSエキスパート養成読本][16]
 
-[Amazon Web Services クラウドネイティブ・アプリケーション開発技法](B01E8EQ264)
+[Amazon Web Services クラウドネイティブ・アプリケーション開発技法][17]
 
-[Amazon Web Services 定番業務システム12パターン 設計ガイド](4822237559)
+[Amazon Web Services 定番業務システム12パターン 設計ガイド][18]
 
-[Amazon Web Services完全ソリューションガイド](B01N7M7IVS)
+[Amazon Web Services完全ソリューションガイド][19]
 
-[シナリオで学ぶパブリッククラウド Amazon Web Services 設計＆開発ガイド](B072QKQN5Y)
+[シナリオで学ぶパブリッククラウド Amazon Web Services 設計＆開発ガイド][20]
 
 [1]:./[BOOK]B07M7S9GDL.md
 [2]:./[BOOK]B01LZ2CBKB.md
@@ -51,6 +51,15 @@
 [9]:./[BOOK]B07HJZDGP6.md
 [10]:./[BOOK]B0126HZGP8.md
 [11]:./[BOOK]B07BF4G5C1.md
+[12]:./[BOOK]B01M2BMB0V.md
+[13]:./[BOOK]B01BWM4FNM.md
+[14]:./[BOOK]B00T5ZGX0W.md
+[15]:./[BOOK]B00VHW3PG6.md
+[16]:./[BOOK]B01CXM3DZQ.md
+[17]:./[BOOK]B01E8EQ264.md
+[18]:./[BOOK]4822237559.md
+[19]:./[BOOK]B01N7M7IVS.md
+[20]:./[BOOK]B072QKQN5Y.md
 
 <!--
 []:./[BOOK].md
