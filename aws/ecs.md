@@ -1,3 +1,9 @@
+# Amazon ECS
+  Amazon Elastic Container Service  
+  Dockerコンテナインスタンスのクラスター管理サービス  
+  EC2上での起動と、Fargate上での起動のタイプがある
+
+
 # ECSのネットワークモード
 - bridge  
  デフォルト、Dockerのブリッジ機能が使われる  
