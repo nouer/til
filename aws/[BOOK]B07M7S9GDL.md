@@ -85,7 +85,7 @@
         ストリーミング配信ができる
   - コンピューティングサービス
     - EC2  
-     インスタンスメタデータが取得できる、http://169.254.169.254/latest/meta-data/
+      インスタンスメタデータが取得できる、http://169.254.169.254/latest/meta-data/
     - AMI
     - Lambda
     - API Gateway
@@ -110,13 +110,23 @@
     - AWS Import/Export Snowball
   - データベースサービス
     - RDS  
-      サポートされるデータベースエンジン
+      サポートされるデータベースエンジン  
         - Amazon Aurora(Aurora)
         - PstgreSQL
         - MySQL
         - MariaDB
         - Oracle Database
         - SQL Server 
+
+      リードレプリカが利用できるのは、MySQL, MariaDB, PostgreSQL, Aurora  
+      リードレプリカはマルチAZや異なるリージョンでも利用可能
+      SSL接続でRDSを利用できるのは、MySQL, MariaDB, SQL Server, Oracle, PostgreSQL  
+    - DynamoDB  
+      デフォルトは結果整合性モデル（読み取りに一貫性はない）だが、読み取り一貫性オプションを付けることで、
+      一貫性を保つことができる
+    - Redshift  
+      マネージド型データウェアハウスサービス  
+
 ## AWSにおける高可用アーキテクチャ
 
 ## AWSにおけるパフォーマンス
