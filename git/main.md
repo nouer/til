@@ -48,3 +48,11 @@
 
 ## 他人の削除したリモートブランチがローカルに残っている場合
   - `git fetch --prune`
+
+## pushしてしまったあとに、コミットを失敗していることに気がついた場合
+  - まだ誰もpullしていない場合、強制上書きする  
+    `git reset HEAD^ --hard`  
+    `git push origin -f`  
+  - もう誰かpullしている場合、打ち消しをpushする
+    `git revert HEAD^`  
+    `git push`
