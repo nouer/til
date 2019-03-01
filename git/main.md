@@ -1,13 +1,50 @@
-# Commiterの変更方法
- - 新しい環境からgitにコミットしたらCommiterを間違えていた場合等
- - リポジトリ直下の`.gitconfig`を修正する  
-    git config --local user.name Johnny  
-    git config --local user.email johnny@hoge.com
- - 現在のCommitに適応する場合、`git --amend`で情報を変更する
+# Git TIL
+## Commiterの変更方法
+  - 新しい環境からgitにコミットしたらCommiterを間違えていた場合等
+  - リポジトリ直下の`.gitconfig`を修正する  
+     `git config --local user.name Johnny`   
+     `git config --local user.email johnny@hoge.com`
+  - 現在のCommitに適応する場合、`git --amend`で情報を変更する
 
-# Authorの変更方法
- - 新しい環境からgitにコミットしたらAuthorを間違えていた場合等
- - `git --amend --author`で修正する  
-    git commit --amend --author="Johnny <johnny@hoge.com>"
-    git log --pretty=full
-    
+## Authorの変更方法
+  - 新しい環境からgitにコミットしたらAuthorを間違えていた場合等
+  - `git --amend --author`で修正する  
+     git commit --amend --author="Johnny <johnny@hoge.com>"
+     git log --pretty=full
+
+## addのやり忘れ
+  - 追加する場合  
+    `git add` したあと、`git commit --amend` でコミットを修正する
+  - commit自体をなかったコトにする場合  
+    `git reset --soft HEAD^`
+  - commitも変更もなかったことにする場合  
+    `git reset --hard HEAD^`
+  - いくつか前のコミットからやりなおす  
+    `git rebase -i [コミットID]`
+
+## コミットメッセージの変更方法
+  - `git commit --amend`
+
+## `git rebase` メモ
+  - rebaseの指定するIDのコツ  
+    `git rebase -i [コミットID]` で指定するコミットIDは、リベースしたい箇所の一つ前を使う。  
+    以下の3つのコミットが存在していて、`commit_3`を, `commit_2`にリベースする場合は、コミットIDは`commit_1`を指定する  
+      - commit_3 2019/03/01
+      - commit_2 2019/02/01
+      - commit_1 2019/01/01
+
+    リベースの指示には、commit_3 は squash, commit_2 は pick を指定する  
+      - pick commit_2
+      - squash commit_3
+
+## remoteブランチの削除
+  - 空ブランチのpushで削除する場合  
+    1. `git branch -d [削除するブランチ]`
+    1. `git push origin :[削除するブランチ]`  
+      (空のブランチをpushしているので削除される)
+
+   - `--delete`で削除する場合
+     1. `git push --delete origin [削除するブランチ名]`
+
+## 他人の削除したリモートブランチがローカルに残っている場合
+  - `git fetch --prune`
