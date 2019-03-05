@@ -5,6 +5,21 @@
 ## 第2章 Gitとバージョン管理の概要
   - repository = 倉庫
   - trunk = 幹
+  - ファイルリストをみる `git ls-files`
+  - ファイルの詳細をみる `git blame [ファイル名]`
+  - コミット履歴をみる `git log`
+  - ワンラインでコミット履歴をみる `git log --oneline`
+  - 用語  
+    - branch
+    - checkout
+    - clone
+    - commit
+    - distributed
+    - repository
+    - staging area
+    - timeline
+    - version control
+
   
 ## 第3章 Gitに馴染む
 ## 第4章 リポジトリの作り方と使い方
