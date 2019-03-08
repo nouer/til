@@ -134,14 +134,83 @@
   - マージの際にベースとなるコミットを表示する `git merge-base [ブランチ名1] [ブランチ名2]
 
 ## 第11章 クローン（複製）を作る
+  - リポジトリのクローンを作成する `git clone [複製元] [クローンを作成するディレクトリ]`
   - ブランチごとのファイルリストを表示 `git ls-tree [ブランチ名|ID|タグ]`
 
 ## 第12章 リモートとの共同作業
+  - 現在のリポジトリにあるリモートの名前を表示する `git remote`
+  - リモートの名前を対応するURLと同時に表示する `git remote -v show`
+  - リモートを追加する `git remote add [リモート名] [ローカルリポジトリ]`
+  - リモートのリファレンスを表示する `git ls-remote`
+
 ## 第13章 変更をプッシュ（送出）する
+  - masterブランチをoriginという名前のリモートにプッシュする `git push origin master`
+  - 現在のブランチをデフォルトリモート追跡ブランチにプッシュする `git push`
+  - デフォルトリモート追跡ブランチを設定する `git push --set-upstream [ブランチ名]`
+  - 正規表現を使って設定を表示する `git config --get-regexp [正規表現]`
+  - ローカルブランチを削除する `git branch -d [ブランチ名]`
+  - リモートブランチを削除する `git push origin :[ブランチ名]`
+  - タグを付ける `git tag -a [タグ名] -m [タグメッセージ] [コミットID]`
+  - リモートにタグをプッシュする `git push origin [タグ名]`
+  - すべてのタグをデフォルトのリモートにプッシュする `git push --tags`
+  - ローカルのタグを削除する `git tag -d [タグ名]`
+  - リモートのタグを削除する `git push origin :[タグ名]`
+  - プッシュの方式にはsimpleと、matching等が存在する
+    - nothing  
+      sourceとdestinationの指定が必須
+    - current  
+      カレントブランチをプッシュして、同名のブランチを更新する
+    - upstream  
+      currentと同様の動作
+    - simple  
+      upstreamと同様、ブランチ名が上流のブランと同一かどうかチェックする
+    - matching  
+      リモートに同名のブランチを持つ全てのブランチをプッシュする
+  - プッシュの方式を設定する `git config push.default [プッシュ方式]`
+
 ## 第14章 同期を保つ（プル）
+  - ローカルリポジトリをリモートリポジトリ（複製元）と同期させる、git fetchとgit mergeで構成される `git pull`
+  - ローカルリポジトリにリモートリポジトリから新しいコミットを取り込む、リモート追跡ブランチが更新される `git fetch`
+  - FETCH_HEADからの新しいコミットを、カレントブランチにマージする `git merge FETCH_HEAD`
+  - FETCH_HEADがカレントブランチの子孫（Fast-Forward）である場合に限りマージする `git pull --ff-only`
+
 ## 第15章 ソフトウェア考古学
+  - マージの結果であるコミットのリストを表示 `git log --merges`
+  - 正規表現で文字列を含んでいるコミットのリストを表示 `git log --grep=[文字列]`
+  - 2つの日付の間に作られたコミットのリストを表示 `git log --since MM/DD/YYYY --until MM/DD/YYYY`
+  - 著者名によるコミットの要約を表示 `git shortlog`
+  - 同時にEメールも表示 `git shortlog -e`
+  - 著者を指定してコミットのリストを表示 `git log --author=[著者名]`
+  - すべてのブランチを絡む表示 `git branch --column`
+  - ブランチIDから名前の表示 `git name-rev [ブランチID]`
+  - 指定したコミットIDを含むブランチの表示 `git branch -r -contains [コミットID]`
+  - 正規表現で文字列を含むファイルを探し出す `git grep [文字列]`
+  - blame出力でファイルを表示 `git blame [ファイル名]`
+
 ## 第16章 {git rebase}を理解する
+  - ブランチ間のログを表示 `git log [ブランチID]..[ブランチID]`
+  - ブランチを最新のコミットにリベース `git rebase [ブランチID]`
+  - HEADの変更をすべて記録したreflogを表示 `git reflog`
+  - ステージングも作業ディレクトリ両方を、コミットIDの内容でリセットする `git reset --hard [コミットID]`
+  - リベースを対話型で行う `git rebase --interactive [コミットID]`
+  - 指定のコミットをカレントブランチにコピーする `git cherry-pick [コミットID]`
+
 ## 第17章 ワークフローとブランチの規約
+  - ファイルの追加なしにコミットする `git commit --allow-empty -m [コミットメッセージ]`
+  - 指定のブランチをカレントブランチに、たとえFast-Forwardであったとしても、マージコミットを作成する `git merge --noff [ブランチID]`
+  - git flowを利用する（詳しくはgit flowのTIL参照）
+
 ## 第18章 GitHubを使う
+  - 読み飛ばし
+
 ## 第19章 サードパーティ製ツールとGit
+  - 読み飛ばし
+
 ## 第20章 Gitを研ぎすませる
+  -  ローカルのGitの設定をリストで表示 `git config --local --list`
+  -  グローバルのGitの設定をリストで表示 `git config --global --list`
+  -  システムのGitの設定をリストで表示 `git config --system --list`
+  -  相対的日付表示でログを表示 `git -c log.date=relative log`
+  -  ローカルのGitの設定をエディタで開く `git config --local --edit`
+  -  グローバルのGitの設定をエディタで開く `git config --global --edit`
+  -  システムのGitの設定をエディタで開く `git config --system --edit`
