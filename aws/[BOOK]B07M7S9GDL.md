@@ -126,7 +126,72 @@
       一貫性を保つことができる
     - Redshift  
       マネージド型データウェアハウスサービス  
-
+      大量のデータの集計・分析に向いている。
+    - ElastiCache
+  - データ通知・連携処理サービス
+    - 通知処理
+      - Amazon Simple Email Service(SES)
+        APIで、メールを利用して通知を行うことができる
+      - Amazon Simple Notification Service (SNS)
+        HTTPSなどのさまざまなプロトコルでアプリケーションから送信することができる
+        CloudWatchやSQS、LambdaをはじめとしたAWSのさまざまなサービスへの通知・連携も可能
+      - SNSの構成
+        - トピック
+        - サブスクライバ（購読者）
+        - パブリッシュ（メッセージの配信）
+    - メッセージキューイング処理
+      - Amazon Simple Queue Service(SQS)
+    - パイプライン処理
+      - Amazon Data Pipeline(Data Pipeline)
+        - データのETL処理をスケジュール機能で自動化できる
+        - データの順次処理をワークフロー形式で定義
+        - 処理の成功・失敗などのイベント通知が可能
+        - オンプレとの連携が可能
+    - ストリーミング処理
+      - Aamazon Kinesis
+        - Kinesisの構成
+          - Kinesis Data Streams
+          - Kinesis Data Firehose
+          - Kinesis Data Analytics
+  - 構成管理サービス  
+    - 構成管理
+      - プロビジョニング
+      - デプロイ
+    - Amazon CloudFormation
+      - テンプレート
+      - スタック
+    - Amazon Elastic Beanstalk
+    - AWS OpsWorks
+    - AWS CodeDeploy
+  - 運用管理サービス
+    - CloudWatchの概要
+      - EC2のメトリクス
+      - 標準メトリクス
+        - CPUUtilization
+        - DiskReadOps
+        - DisReadBytes
+        - NetworkIn
+      - カスタムメトリクス
+    - CloudWatchの監視間隔と保存期間
+      - 基本モニタリング  
+        無料、5分間隔、最大15ヶ月保存
+      - 詳細モニタリング  
+        有料、1分間隔、最大15ヶ月保存
+      - 監視間隔はAWSサービスによって異なる
+    - CloudWatchアラームによるアラームとアクション設定
+      - CloudWatchの3つの状態
+        - OK
+        - ALARM
+        - INSUFFICIENT-DATA
+    - CloudWatch Eventsによるイベント駆動型監視とアクション設定
+    - その他の運用管理サービス
+      - CloudWatch Logs
+      - CloudTrail
+      - VPCフローログ
+      - AWS Config
+      - AWS Systems Manager
+      - AWS Trusted Advisor
+      
 ## AWSにおける高可用アーキテクチャ
 
 ## AWSにおけるパフォーマンス
