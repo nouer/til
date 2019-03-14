@@ -71,3 +71,8 @@
 ## ステージングされているファイルの削除
   - `git rm --cached [ファイル名]`
   - `git rm -r --cached [ディレクトリ名]`
+
+## リモートのブランチにローカルを強制的に合わせる場合
+  - origin/developがリモートのブランチ
+  - `git fetch origin`
+  - `git reset --hard origin/develop`
