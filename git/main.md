@@ -76,3 +76,39 @@
   - origin/developがリモートのブランチ
   - `git fetch origin`
   - `git reset --hard origin/develop`
+
+## キーワードが含まれる変更をhunkで表示
+  - `git log -p -S'KEYWORD'`  
+  - `git log -p -G'REGEX KEYWORD'`  # 正規表現  
+
+## 空コミット
+  - ファイルの変更なしにコミットメッセージを残したい場合  
+  - `git commit --allow-empty -m [メッセージ]`
+
+## 修正履歴をファイル単位で表示
+  - `git blame [ファイル名]`  
+
+## 修正履歴を行範囲を指定してファイル単位で表示
+  - `git blame -L [開始行番号],[終了行番号] [ファイル名]`  
+
+## コミットIDを指定して修正履歴をファイル単位で表示
+  - `git blame [コミットID] -- [ファイル名]`
+
+## cygwinでtigのインストール
+
+  - setup.exeで以下をインストールしておく  
+    - ncurses
+    - libncurses
+    - libiconv
+  - 以下を実行
+<pre>
+$ cd 作業ディレクトリ
+$ git clone git://github.com/jonas/tig.git
+$ cd git
+$ make configure
+$ CFLAGS="-I/usr/include/ncursesw" LDLIBS="-lcursesw"
+# ↓インストール先のディレクトリを記述します 
+$ ./configure --prefix="$HOME/tig"
+$ make
+$ make install
+</pre>
