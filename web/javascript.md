@@ -18,3 +18,14 @@
     × `'a b c'.replace(' ', '-')   // a-b c`  
     ○ `'a b c'.replace(/ /g, '-')  // a-b-c`
 
+## Array
+  - 要素を検索  
+    `array.indexOf`  
+    `console.log(array.indexOf('aaaa'));`
+  - 要素を追加  
+    `array.push('aaaa')`
+  - 要素を削除
+    `delete array['aaaa']`
+  - サイズ
+    `array.length`
+
