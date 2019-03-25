@@ -24,8 +24,8 @@
     `console.log(array.indexOf('aaaa'));`
   - 要素を追加  
     `array.push('aaaa')`
-  - 要素を削除
+  - 要素を削除  
     `delete array['aaaa']`
-  - サイズ
+  - サイズ  
     `array.length`
 
