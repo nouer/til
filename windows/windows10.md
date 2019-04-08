@@ -1,5 +1,19 @@
 # Windows 10 til
 ## OS
+### Windowsで右Altキーに［漢字］キーを割り当てる方法
+  1. レジストリエディタを起動する
+  1. 以下のキーを開く  
+     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters`
+  1. 以下のキーを編集する  
+
+      |値の名称 |データ型 |値 |  
+      |---|---|---|  
+      |LayerDriver JPN|REG_SZ|kbdax2.dll|
+      |OverrideKeyboardIdentifier|REG_SZ|AX_105KEY|
+      |OverrideKeyboardSubtype|REG_DWORD|1|
+      |OverrideKeyboardType|REG_DWORD|7|
+  1. Windowsを再起動する
+
 ### UEFIの起動方法
   - スタートメニューの電源ボタンから、Windows10の再起動をShiftを押しながら行う。
   - 青色の画面が表示されるので、トラブルシューティング→詳細オプション→UEFIファームウェアの設定を選択する
