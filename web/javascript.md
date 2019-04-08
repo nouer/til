@@ -113,3 +113,50 @@ sample().then(result => {
     console.log(result); // => 15
 });
 </pre>
+
+## console.log
+  - object  
+    `%o, %O`
+  - integer  
+    `%d, %i`
+  - string  
+    `%s`
+  - floting-point number  
+    `%f`
+  - css  
+    `%c`
+## console.group
+  console.groupで開始して、console.gourpEndで終了する  
+
+    console.group();
+    console.log("Inside 1st group");
+    console.group();
+    console.log("Inside 2nd group");
+    console.groupEnd();
+    console.groupEnd();
+    console.log("Outer scope");
+
+## console.trace
+  スタックトレースの出力ができる
+
+## console.time
+  - console.ltime
+  - console.timeLog
+  - console.timeEnd
+
+## console.count
+  console.countでカウント表示  
+  console.countResetでリセット
+
+    console.count();
+    console.count('1stcount')  
+    console.count('2ndcount');
+    console.lcuntReset();
+    console.lcuntReset('1stcount');
+    console.lcuntReset('2ndcount');
+
+## console.table
+  テーブルで配列を表示  
+
+    console.table([[0,1,2,3,4], [5,6,7,8,9]]);
+
