@@ -1,4 +1,8 @@
 # screen til
+## screen で Permission denied が表示される
+  - .bashrc に以下を追記
+    `export SCREENDIR=$HOME/.screen`
+
 ## 基本
   - 名前付きのセッションを開始 `screen -S <セッション名>`
   - セッションとスクリーンのリスト表示 `screen -ls`

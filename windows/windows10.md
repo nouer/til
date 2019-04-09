@@ -19,6 +19,16 @@
   - 青色の画面が表示されるので、トラブルシューティング→詳細オプション→UEFIファームウェアの設定を選択する
 
 ##  WSL
+### WSLのファイルについて
+  - WSL上のファイルシステムを、Windowsから操作したり、参照してはいけない  
+    動機がとられることなく、よくわからない状況になってしまうことがある  
+    Windows上のファイルシステムを、WSLから `/mnt` 経由で参照することで回避する  
+    たとえば、/home/user_name/projects/sample というフォルダを  
+    windowsのVSCodeなどから参照するときは、  
+    windows上に、たとえば、c:\projects\sample フォルダを作成し、  
+    WSLからシンボリックリンクを作成する  
+      `ln -s /mnt/c/projects/sample`
+
 ### Windows Subsystem for Linux のインストール
   - [Qiitaの記事](https://qiita.com/Aruneko/items/c79810b0b015bebf30bb)
 

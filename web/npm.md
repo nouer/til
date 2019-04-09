@@ -23,6 +23,15 @@
   1. 3の変更を反映する  
     `source ~/.profile`
 
+## npm install でエラー
+  - node_modules の削除をためしてみる  
+    `rm -rf node_modules`
+  - npm のキャッシュごとクリアしてみる
+    `npm cache clean`
+
+## 該当パッケージを、sourceからnpm installを行う  
+  - `npm install sqlite3 --build-from-source`
+
 ## npm/node のパスの確認
   - node_modulesの場所  
     npm root -g
