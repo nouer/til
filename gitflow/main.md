@@ -10,8 +10,8 @@
 
 # インストール
 - macの場合homebrewでインストールが簡単  
-`git install git`  
-`git install git-flow`
+`brew install git`  
+`brew install git-flow`
 
 # 使い方
 - 初期化する  

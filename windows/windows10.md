@@ -54,4 +54,7 @@
   - デバイス名は `'`（シングルクォーテーション）で囲んでおくと無難 → `'\\shared_folder\aaa`
   - `umount [マウントポイント]`で解除
 
-### Windowsで右Altキーに感じキーを割り当てる
+### WSLでのgitの設定
+  - パーミッションの変更を無視する設定
+    `git config --global core.filemode false`
+    
