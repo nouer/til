@@ -27,5 +27,5 @@
        "git.path": "C:\\tools\\wslgit.exe"
    }
 </pre>
-
+  1. vscodeを再起動する
   
