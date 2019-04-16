@@ -1,5 +1,8 @@
 # Windows 10 til
 ## OS
+### 自動ログインの設定
+  - `netplwiz`を起動して行う
+
 ### Windowsで右Altキーに［漢字］キーを割り当てる方法
   1. レジストリエディタを起動する
   1. 以下のキーを開く  
@@ -57,4 +60,20 @@
 ### WSLでのgitの設定
   - パーミッションの変更を無視する設定
     `git config --global core.filemode false`
+    
+### WSLへのjavaのインストール  
+  - jdkのインストール
+    ```shell
+    $ sudo apt install openjdk-8-jre-headless
+    ``` 
+  - JAVA_HOMEの設定
+    ```shell
+    $ sudo update-alternatives --list java
+    /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+    ``` 
+    表示されたパスをexportコマンドでJAVA_HOMEに設定する、/bin/javaは含まない。
+    ```shell
+    $ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+    ``` 
+
     
