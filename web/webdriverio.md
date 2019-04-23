@@ -97,3 +97,55 @@
       ```shell
       ./node_modules/.bin/wdio webio.conf.js
       ```
+
+---
+---
+
+↓　削除分
+
+
+# WebdriverIO
+## Selenium 環境作作成
+  1. [Selenium Standalone Server](https://www.seleniumhq.org/download/) を導入   
+
+      ```shell
+      npm install --save-dev selenium-standalone
+
+      npm install --save webdriverio
+      npm install --save @wdio/cli
+      
+      
+      # テストフレームワークのインストール
+      npm install --save-dev wdio-mocha-framework
+      npm install --save-dev chai
+      
+      # レポーター(テスト結果の表示ツール)の導入。お好みで
+      npm install --save-dev wdio-dot-reporter
+      npm install --save-dev wdio-junit-reporter
+      npm install --save-dev wdio-spec-reporter
+      ```
+
+  1. configの作成
+      ```shell
+      $ ./node_modules/.bin/wdio config
+      ```
+      表示される質問に答える、YESでよい  
+      作成された`wdio.conf.js`の`cabpabilities`の`browserName`を`chrome`に変更する
+
+  1. テストスクリプトを作成する
+      ```js
+      var assert = require('assert');
+      describe('webdriver.io page', function() {
+          it('should have the right title - the fancy generator way', function () {
+              browser.url('http://webdriver.io');
+              var title = browser.getTitle();
+              assert.equal(title, 'WebdriverIO - WebDriver bindings for Node.js');
+          });
+      });
+      ```
+
+  1. WebdriverIOを実行
+
+      ```shell
+      $ ./node_modules/.bin/wdio
+      ```
