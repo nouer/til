@@ -24,6 +24,4 @@ Python速習
   - 内挿／外挿
   - 微分の公式
     - 導関数
-```math
-$f'(x)=\displaystyle\lim_{h\to 0}\dfrac{f(x+h)-f(x)}{h}$<
-```
+    - べき乗の微分
