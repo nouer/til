@@ -41,40 +41,73 @@ Chapter 10 Jupyterのカスタマイズ
   10.4 Jupyter設定ファイル
 </pre>
 ## メモ
-   - 扱うモジュール  
-     - numpy ナムパイ 行列
-     - sympy シムパイ 代数計算
-     - scikit-learn サイキットラーン 機械学習
-     - pandas パンダス データ分析
-     - matplotlib マットプロットリブ 視覚化
-     - pillow ピロウ イメージ処理
-   - JupyterはIPythonから派生したプロジェクト
-   - Pythonの種類
-     - CPython オリジナル
-     - IronPython .NET Framework
-     - JPython JVM/JRE
-   - Jupyter Lab
-   - Amazon SageMaker と Google Colaboratory
-   - ベクトル値
+  - 扱うモジュール  
+    - numpy ナムパイ 行列
+    - sympy シムパイ 代数計算
+    - scikit-learn サイキットラーン 機械学習
+    - pandas パンダス データ分析
+    - matplotlib マットプロットリブ 視覚化
+    - pillow ピロウ イメージ処理
+  - JupyterはIPythonから派生したプロジェクト
+  - Pythonの種類
+    - CPython オリジナル
+    - IronPython .NET Framework
+    - JPython JVM/JRE
+  - Jupyter Lab
+  - Amazon SageMaker と Google Colaboratory
+  - ベクトル
+     ```Python
+       変数 = np.array(リスト)
+     ```
+    - ゼロのベクトル
+     ```Python
+       変数 = np.zeros(要素数)
+     ```
+    - 1のベクトル
+     ```Python
+       変数 = np.ones(要素数)
+     ```
+    - 等差数列
+      - ステップ数で作成
+       ```Python
+         変数 = np.arange(開始数, 終了数, ステップ)
+       ```
+      - 分割数で作成
+       ```Python
+         変数 = np.linspace(開始数, 終了数, 分割数)
+       ```
+  - 行列
+     ```Python
+       変数 = np.array(２次元リスト)
+     ```
+     ```Python
+       変数 = np.matrix(２次元リスト)
+     ```
+     - 単位行列
+       ```Python
+         変数 = np.identity(要素数)
+       ```
+     - 非正方の行列
+       ```Python
+         変数 = np.eye(行数, 列数, オフセット)
+       ```
+     - 対角行列
+       ```Python
+         変数 = np.diag(リスト)
+       ```
+  - 変換
+    - ベクトルから行列へ変換
       ```Python
-        変数 = np.array(リスト)
+        変数 = [ndarray].reshape(行数, 列数)
       ```
-     - ゼロのベクトル
+    - 行列からベクトルへ変換
       ```Python
-        変数 = np.zeros(要素数)
+        変数 = np.revel([matrix])
       ```
-     - 1のベクトル
-      ```Python
-        変数 = np.ones(要素数)
-      ```
-     - 等差数列
-       - ステップ数で作成
-        ```Python
-          変数 = np.arange(開始数, 終了数, ステップ)
-        ```
-       - 分割数で作成
-        ```Python
-          変数 = np.linspace(開始数, 終了数, 分割数)
-        ```
+  - 転置
+    ```Python
+      変数 = [ndarray].reshape((3,3))
+    ```
+    
+    
 
-  
