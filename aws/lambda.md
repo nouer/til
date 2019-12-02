@@ -11,6 +11,15 @@
 
 ## [【新機能】APIGatewayでWebSocketが利用可能になったのでチャットAPIを構築してみた](https://qiita.com/G-awa/items/472bc1a9d46178f3d7a4)
 
+- aws sam cli のインストール  
+`pip install aws-sam-cli`
+
+- wscat のインストール  
+`npm install -g wscat`
+
+- wscatでコネクションを張る  
+`wscat -c wss://{YOUR-API-ID}/execute-api.{YOUR-REGION}.amazonaws.com/Prod`
+
 ## [Lambdaでお手軽サーバーレス入門（API Gatewayデプロイ編）](https://qiita.com/kakken1988/items/c864e8eecccdf877c612)
 
 ## [Lambdaでお手軽サーバーレス入門（CloudWatch Events編）](https://qiita.com/kakken1988/items/12c1af589ade9f780222)
