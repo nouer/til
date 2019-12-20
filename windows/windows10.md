@@ -58,8 +58,10 @@
   - `umount [マウントポイント]`で解除
 
 ### WSLでのgitの設定
-  - パーミッションの変更を無視する設定
+  - パーミッションの変更を無視する設定  
     `git config --global core.filemode false`
+  - 日本語ファイル名を表示するための設定  
+    `git config --global core.quotepath false`
     
 ### WSLへのjavaのインストール  
   - jdkのインストール
