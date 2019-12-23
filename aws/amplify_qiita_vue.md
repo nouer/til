@@ -9,8 +9,11 @@ slide: false
   1. vue上での subscription による リアルタイムデータ配信アプリの構築
   1. amplify の機能による S3+CloudFlont でのアプリのデプロイ
 
+##### [React.js バージョンはこちら](https://qiita.com/nouernet/items/d1d8588c0eef32bfc834)
+
 # 前提  
   1. 利用するリージョンは ap-northeast-1  
+  1. CodeCommitのリポジトリ名は amplify_test_vue
   1. amplifyで利用するiamユーザは amplify-test-user
   1. アプリ名はmyapp
   1. api名はmyappapi
@@ -18,7 +21,7 @@ slide: false
 # 構築手順
 <ol>
 <li>CodeCommitへのGitリポジトリ作成  
-    * 'amplify_test'を使用
+    * 'amplify_test_vue'を使用
 
 </li><li>Cloud9の開発環境作成  
     * aws consoleで作成
@@ -33,7 +36,7 @@ slide: false
 </ol></li><li>開発環境とGitリポジトリの連携  
   
 ```console
-$ git clone ssh://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/amplify_test
+$ git clone ssh://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/amplify_test_vue
 ```  
   
 </li><li>nodeのインストール
@@ -135,13 +138,13 @@ $ cd myapp
 + disableHostCheck: true,
 ```
 
-</li><li>アプリケーションを実行
+</li><li>アプリケーションを実行して確認
 
 ```console
 $ npm run dev
 ```
 
-</li><li>メニューの Preview -> Preview Running Application を実行  
+  メニューの Preview -> Preview Running Application を実行  
   Cloud9内のブラウザでVueのセットアップが完了していることを確認
 
 </li><li>aws-amplify をインストール
