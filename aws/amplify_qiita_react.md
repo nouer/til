@@ -18,6 +18,9 @@ slide: false
   1. アプリ名はmytodo
   1. api名はmytodoapi
 
+# 注意
+  この投稿は @aws_amplify/api, @aws_amplify/pubsub パッケージを利用しています。 <br/><font color="red">aws_amplify, aws_amplify_vue パッケージと同時に利用することはできません。</font>
+
 # 構築手順
 <ol>
 <li>CodeCommitへのGitリポジトリ作成  
@@ -294,6 +297,10 @@ export default App;
 
 </li><li>実行してブラウザでTodoが追加されることを確認
 
+```console
+$ npm start
+```
+
   Add Todoボタンをクリックしたあと、リロードすることでTodoが追加されていることが確認できる
 
 </ol></li><li>subscription を利用してみる  
@@ -432,6 +439,10 @@ $ amplify publish
 ```console
 $ amplify delete
 ```
+
+amplify delete した後、再度 amplify init で作成し直す場合は、aws-exports.js ファイルを削除しておく。init や add で更新されない。
+
+amplify init したアプリを deleteせずに再度initする場合、CloudFormation上から削除できなくなるので、注意。
 
 <!--
 </li><li>auth の追加を準備
