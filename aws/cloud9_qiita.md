@@ -59,7 +59,7 @@ $ npm run serve
 ```
 
   メニューの Preview -> Preview Running Application を実行  
-  Invalid Host header と表示されアクセスできない
+  <font color="red">Invalid Host header と表示されアクセスできない</font>
 
 </li><li>vue config の作成
 
@@ -83,4 +83,3 @@ $ npm run serve
   Vueアプリが表示される
 
 </li>
-</ol>
